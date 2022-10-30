@@ -1,0 +1,116 @@
+/* COMMON STYLES */
+:root {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+
+}
+
+/* LAYOUT */
+.container {
+  width: 1300px;
+  margin: 250px auto;
+}
+
+
+.row-1 {
+  float: left;
+  display: inline-block;
+}
+
+.row-2 {
+  display: flex;
+}
+
+
+.col-50 {
+  width: 50%;
+  box-sizing: ;
+}
+
+.col-50:first-child {
+  padding-right: 3em;
+}
+
+.section--decentralised-economy div {
+  padding-left: 5em;
+  margin-bottom: 220px;
+}
+
+.title-1--center {
+  text-align: center;
+}
+
+.label--top {
+  position: absolute;
+}
+
+.label--top-center {
+  transform: translateY(-6rem) translateX( 39rem);
+} 
+
+.label--top-left {
+  transform: translateY(-12rem);
+}
+
+/* TYPOGRAPHY */
+p, ul { 
+  line-height: 1.7rem;
+  font-weight: 300; 
+}
+
+li {
+  margin-bottom: .7em;
+}
+.title-1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 1em 0 0 0;
+}
+
+.title-2 {
+  font-weight: 100;
+  font-size: 2.7rem;
+  margin: 0 0 .9em 0;
+}
+
+.label {
+  font-size: 0.7rem;
+  margin: 0;
+}
+
+/* COLOR AND EFFECTS */
+.label--primary {
+  color: #557ef8;
+}
+
+.label--dashed::before {
+  display: inline-block;
+  content:"_____";
+  font-family: arial;
+  font-size: 1em;
+  margin-right: .7em;
+  transform: translateY(-.5em);
+}
+
+.list--decentralised-economy-checked li {
+  list-style-image: url(../icons/check.svg);
+}
+
+b {
+  color: #777777;
+}
+
+.list--style {
+  list-style-type: none;
+}
+
+.list--icon:first-child {
+  list-style-image: url(../icons/services-icon-1.svg);
+} 
+
+.list--icon:nth-child(2) {
+  list-style-image: url(../icons/services-icon-2.svg);
+} 
