@@ -55,7 +55,11 @@ body {
   transform: translateY(-12rem);
 }
 
-.list--icon p {
+.list-1--icon p {
+  margin-left: 30px;
+}
+
+.list-2--icon p {
   margin-left: 30px;
 }
 
@@ -117,12 +121,32 @@ b {
   list-style-type: none;
 }
 
-.list--icon:first-child {
+.list-1--icon li::marker {
+  margin-right: 10px;
+}
+
+.list-1--icon li:first-child {
   list-style-image: url(../icons/services-icon-1.svg);
 } 
 
-.list--icon:nth-child(2) {
+.list-1--icon li:nth-child(2) {
   list-style-image: url(../icons/services-icon-2.svg);
 }
+
+.list-1--icon li:nth-child(3) {
+  list-style-image: url(../icons/services-icon-3.svg);
+}
+
+.list-2--icon li:first-child {
+  list-style-image: url(../icons/services-icon-4.svg);
+} 
+
+.list-2--icon li:nth-child(2) {
+  list-style-image: url(../icons/services-icon-5.svg);
+} 
+
+.list-2--icon li:nth-child(3) {
+  list-style-image: url(../icons/services-icon-6.svg);
+} 
 
 
