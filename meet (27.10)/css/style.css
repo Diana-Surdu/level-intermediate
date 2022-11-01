@@ -121,9 +121,6 @@ b {
   list-style-type: none;
 }
 
-.list-1--icon li::marker {
-  margin-right: 10px;
-}
 
 .list-1--icon li:first-child {
   list-style-image: url(../icons/services-icon-1.svg);
