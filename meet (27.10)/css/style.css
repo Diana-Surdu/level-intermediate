@@ -24,6 +24,11 @@ body {
   display: flex;
 }
 
+.row-3 {
+  display: flex;
+  padding-top: 100px;
+}
+
 
 .col-50 {
   width: 50%;
@@ -62,6 +67,7 @@ body {
 .list-2--icon p {
   margin-left: 30px;
 }
+
 
 /* TYPOGRAPHY */
 p, ul { 
@@ -145,5 +151,46 @@ b {
 .list-2--icon li:nth-child(3) {
   list-style-image: url(../icons/services-icon-6.svg);
 } 
+
+.cl-telegram-link {
+  text-indent: -9999px;
+  background-image: url(../icons/telegram-link.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40px;
+}
+
+.navbar-collapse {
+  flex-grow: unset !important;
+}
+
+.navbar-brand:hover {
+  opacity: 0.5;
+}
+
+.cl-btn-join:hover {
+  background-color: #2ddfd1;
+  border-color: white;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  background-color: #0c46f5;
+  width: 0%;
+  height: 2px;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
 
 
