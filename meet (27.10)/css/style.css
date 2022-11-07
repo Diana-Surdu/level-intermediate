@@ -14,7 +14,6 @@ body {
   margin: 250px auto;
 }
 
-
 .row-1 {
   float: left;
   display: inline-block;
@@ -75,6 +74,12 @@ p, ul {
   font-weight: 300; 
 }
 
+h4 {
+  font-size: 1rem;
+  line-height: 1.7rem;
+  font-weight: 700;
+}
+
 li {
   margin-bottom: .7em;
 }
@@ -92,6 +97,7 @@ li {
 
 .label {
   font-size: 0.7rem;
+  font-weight: 600;
   margin: 0;
 }
 

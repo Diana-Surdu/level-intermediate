@@ -1,0 +1,131 @@
+@import '_reset.scss';
+@import '_variables.scss';
+
+.section--roadmap {
+  header {
+    margin-bottom: 3em;
+    text-align: center;
+  }
+}
+
+// List
+
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    width: 20%;
+    margin-bottom: 3em;
+    padding: 0 2%;
+    box-sizing: border-box;
+    text-align: center;
+    
+    &:nth-child(5n+1) {
+      h4 {
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+
+    &.current {
+      h4 {
+        &::before {
+          border-bottom-style: solid;
+        }
+        &::after {
+          background: radial-gradient($color-secondary 0%, $color-secondary 30%, transparent 30%);
+        }
+      }
+
+    }
+    &.past {
+      h4 {
+        &::before {
+          border-bottom-style: solid;
+        }
+        &::after {
+          background: $color-primary;
+        }
+      }
+
+    }
+    
+    
+    h4 {
+      &::after {
+        display: block;
+        content: "";
+        width: 1.5em;
+        height: 1.5em;
+        border: 2px solid $color-primary;
+        border-radius: 100%;
+        margin: 1em auto 3em auto;
+        
+        
+      }
+
+      &::before {
+        display: block;
+        content:"";
+        border-bottom: 1px dashed $color-primary;
+        transform: translateY(3.5em) translateX(-60%);
+        width: 113%;
+      }
+    }
+  }
+}
+
+
+//MediaQuery
+
+@media (max-width: 767px) {
+  .timeline {
+    display: block;
+  }
+
+  .timeline li {
+    display: block;
+    width:100%;
+    text-align: left;
+  }
+
+  .timeline li h4 {
+    position: relative;
+    margin-bottom: .5rem;
+
+    &::after {
+      position: absolute;
+      transform: translateX(-180%) translateY(-170%);
+    }
+
+    &::before {
+      position: absolute;
+      width: 10%;
+      transform: rotate(90deg) translate(-44px, 74px);
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .timeline li {
+    width: 50%;
+
+    &:nth-child(2n+1) {
+      h4 {
+        &::before {
+          display: none;
+        }
+        }
+    }
+  }
+
+  .timeline li h4 {
+    &::before {
+      transform: translateY(3.5em) translateX(-54%);
+      width: 102%;
+    }
+
+  }
+} 
