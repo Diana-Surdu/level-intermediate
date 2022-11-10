@@ -9,63 +9,57 @@ body {
 }
 
 /* LAYOUT */
-.container {
+.cl-container {
   width: 1300px;
   margin: 250px auto;
 }
 
-.row-1 {
+.cl-row-1 {
   float: left;
   display: inline-block;
 }
 
-.row-2 {
+
+.cl-row-2 {
   display: flex;
 }
 
-.row-3 {
+/*.cl-row-3 {
   display: flex;
   padding-top: 100px;
-}
+}*/
 
 
-.col-50 {
+.cl-col-50 {
   width: 50%;
-  box-sizing: ;
 }
 
-.col-50:first-child {
+.cl-col-50:first-child {
   padding-right: 3em;
 }
 
-.section--decentralised-economy div {
+.cl-section--decentralised-economy div {
   padding-left: 5em;
   margin-bottom: 220px;
 }
 
-.title-1--center {
+.cl-title-1--center {
   text-align: center;
 }
 
-.label--top {
-  position: absolute;
-}
-
-.label--top-center {
-  transform: translateY(-6rem) translateX( 39rem);
+.cl-label--top-center {
+  transform: translateY(-100px); 
+  text-align: center;
 } 
 
-.label--top-left {
+.cl-label--top-left {
   transform: translateY(-12rem);
 }
 
-.list-1--icon p {
-  margin-left: 30px;
+.cl-list-1--icon p {
+    margin-left: 30px;
 }
 
-.list-2--icon p {
-  margin-left: 30px;
-}
 
 
 /* TYPOGRAPHY */
@@ -83,36 +77,36 @@ h4 {
 li {
   margin-bottom: .7em;
 }
-.title-1 {
+.cl-title-1 {
   font-weight: 700;
   font-size: 2.5rem;
   margin: 1em 0 0 0;
 }
 
-.title-2 {
+.cl-title-2 {
   font-weight: 100;
   font-size: 2.7rem;
   margin: 0 0 .9em 0;
 }
 
-.label {
+.cl-label {
   font-size: 0.7rem;
   font-weight: 600;
   margin: 0;
 }
 
-.list--subtitle {
+.cl-list--subtitle {
   color: black;
   font-weight: 600;
   font-size: 1.3em;
 }
 
 /* COLOR AND EFFECTS */
-.label--primary {
+.cl-label--primary {
   color: #557ef8;
 }
 
-.label--dashed::before {
+.cl-label--dashed::before {
   display: inline-block;
   content:"_____";
   font-family: arial;
@@ -121,7 +115,7 @@ li {
   transform: translateY(-.5em);
 }
 
-.list--decentralised-economy-checked li {
+.cl-list--decentralised-economy-checked li {
   list-style-image: url(../icons/check.svg);
 }
 
@@ -129,33 +123,49 @@ b {
   color: #777777;
 }
 
-.list--style {
+.cl-list-1--icon li {
+  width: 500px;
+}
+
+.cl-list--style {
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3rem;
+}
+
+.cl-list-1--icon li:nth-child(2n+1) {
+  margin-left: 4rem;
 }
 
 
-.list-1--icon li:first-child {
+.cl-list-1--icon li:first-child {
   list-style-image: url(../icons/services-icon-1.svg);
+  
 } 
 
-.list-1--icon li:nth-child(2) {
+.cl-list-1--icon li:nth-child(2) {
   list-style-image: url(../icons/services-icon-2.svg);
+  margin-left: 4rem;
 }
 
-.list-1--icon li:nth-child(3) {
+.cl-list-1--icon li:nth-child(3) {
   list-style-image: url(../icons/services-icon-3.svg);
 }
 
-.list-2--icon li:first-child {
+.cl-list-1--icon li:nth-child(4) {
   list-style-image: url(../icons/services-icon-4.svg);
+  margin-left: 4rem;
+
 } 
 
-.list-2--icon li:nth-child(2) {
+.cl-list-1--icon li:nth-child(5) {
   list-style-image: url(../icons/services-icon-5.svg);
 } 
 
-.list-2--icon li:nth-child(3) {
+.cl-list-1--icon li:nth-child(6) {
   list-style-image: url(../icons/services-icon-6.svg);
+  margin-left: 4rem;
 } 
 
 .cl-telegram-link {
@@ -170,7 +180,7 @@ b {
   flex-grow: unset !important;
 }
 
-.navbar-brand:hover {
+.cl-navbar-brand:hover {
   opacity: 0.5;
 }
 
@@ -196,6 +206,35 @@ b {
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+/*Media Query*/
+
+@media (max-width: 992px) {
+  .cl-row-1, .cl-row-2 {
+    display: block;
+    float: unset;
+    margin: 7rem;
+    
+  }
+
+  .cl-section--decentralised-economy div {
+    padding-left: 0;
+
+  }
+
+  .cl-margin-top {
+    margin-top: 120px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .cl-list--style {
+    display: list-item;
+    margin-left: 3rem;
+  }
+
 }
 
 
