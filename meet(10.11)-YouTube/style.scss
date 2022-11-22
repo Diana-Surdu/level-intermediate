@@ -1,11 +1,5 @@
 
-body {
-  font-family: 'Roboto', sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
+@import "reset.scss";
 
 /*STYLING XS*/
 .navbar {
@@ -71,5 +65,125 @@ a {
     
   }
 }
+
+//FILTER STYLES
+.splide {
+  margin-top: 10px;
+}
+.filters ul {
+  display: flex;
+  align-items: flex-start;
+}
+
+.filters li {
+display: flex;
+margin-right: 12px;
+width: fit-content;
+text-align: center;
+}
+
+.filters li a {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  padding: 5px 10px;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: #dbdbdb;
+  }
+}
+
+
+.drawer {
+  width: max-content;
+  svg {
+    display: inline-block;
+    width: 25px;
+    margin-right: 20px;
+  }
+
+  li {
+    margin-bottom: 15px;
+  }
+
+  .divider {
+    margin-top: 30px;
+    border-top: 1px solid lightgrey;
+  }
+}
+
+.drawer {
+  transition: .5s;
+  position: fixed;
+  left: -500px;
+  &.open {
+    left: 0;
+  }
+}
+
+.dropdown-wrapper {
+  //border: 1px solid red;
+  position: relative;
+  label {
+    cursor: pointer;
+    //padding: 0 1em;
+  }
+  .dropdown {
+    position: absolute;
+    //border: 1px solid green;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1em;
+    display: none;
+
+    background-color: white;
+    border: 1px solid grey;
+    /*&:target {
+      display: block;
+    }*/
+  }  
+
+  #dropdownToggle {
+    display: none;
+  }
+
+  #dropdownToggle:checked + .dropdown {
+    display: block;
+  }
+}
+
+.content {
+
+      width:fit-content;
+      margin: 2rem auto;
+
+      .grid-container {
+        grid-template-columns: 310px;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+        .grid-item {
+          //border: 1px solid red;
+          margin: 0 auto;
+          padding: 15px 0;
+          .img-style {
+            border-radius: 10px;
+          }
+          h4 {
+            margin: .5rem;
+          }
+          p {
+            font-size: .8rem;
+            color: grey;
+          }
+        }
+      }
+      
+}
+
+
+
+
 
 @import '_breakpoints.scss';

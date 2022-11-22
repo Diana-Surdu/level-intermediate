@@ -34,29 +34,165 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <!--splide carousel-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" integrity="sha256-5uKiXEwbaQh9cgd2/5Vp6WmMnsUr3VZZw0a8rKnOKNU=" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" integrity="sha256-FZsW7H2V5X9TGinSjjwYJ419Xka27I8XPDmWryGlWtw=" crossorigin="anonymous"></script>
+  <!--splide carousel-->
+
   <title>YouTube</title>
 </head>
 <body>
   
   <nav class="navbar">
-    <!--xs-->
-    <a href=""><i class="fa-solid fa-bars"></i></a>
+
+    <a href="#mainDrawer" class="drawer-toggler"><i class="fa-solid fa-bars"></i></a>
+
     <a href="" class="brand"><i class="fa-brands fa-youtube"></i> YouTube</a>
-    <!--md-->
+    
     <button class="btn-search">
         <input type="text" placeholder="Search" class="search-input"/>
     
-      <!--/md-->
+    
       <a href="" class="search"><i class="fa-solid fa-magnifying-glass"></i></a>
     </button>
     
-    <!--sm-->
+
     <a href="" class="mic"><i class="fa-solid fa-microphone"></i></a>
-    <!--/sm-->
-    <a href=""><i class="fa-solid fa-ellipsis-vertical"></i></a>
-    <a href="" class="signin"><i class="fa-regular fa-circle-user"></i> Sign in</a>
-    <!--/xs-->
+    
+    <!--Dropdown toggle-->
+    <div class="dropdown-wrapper">
+      <!--<a href="#dropdownMenu" class="dropdown-toggle"><i class="fa-solid fa-ellipsis-vertical"></i></a>-->
+      <label for="dropdownToggle">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+      </label>
+      <input type="checkbox" id="dropdownToggle"/>
+      <ul class="dropdown" id="dropdownMenu" >
+        <li><a href="">Lorem.</a></li>
+        <li><a href="">Ipsam?</a></li>
+        <li><a href="">Deleniti!</a></li>
+        <li><a href="">Obcaecati!</a></li>
+        <li><a href="">Rerum.</a></li>
+      </ul>
+    </div>
+    
+    <a href="" class="signin"><i class="fa-regular fa-circle-user"></i> <span>Sign in</span></a>
+
   </nav>
+
+
+  <div class="splide">
+    <nav class="filters splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide"><a href="">All</a></li>
+        <li class="splide__slide"><a href="">Live</a></li>
+        <li class="splide__slide"><a href="">Gaming</a></li>
+        <li class="splide__slide"><a href="">Game shows</a></li>
+        <li class="splide__slide"><a href="">Television Comedy</a></li>
+        <li class="splide__slide"><a href="">Comedy</a></li>
+        <li class="splide__slide"><a href="">Music</a></li>
+        <li class="splide__slide"><a href="">Television series</a></li>
+        <li class="splide__slide"><a href="">History</a></li>
+        <li class="splide__slide"><a href="">Kygo</a></li>
+        <li class="splide__slide"><a href="">Debates</a></li>
+        <li class="splide__slide"><a href="">Touchdowns</a></li>
+        <li class="splide__slide"><a href="">Angling</a></li>
+        <li class="splide__slide"><a href="">Chill-out music</a></li>
+        <li class="splide__slide"><a href="">Animated films</a></li>
+        <li class="splide__slide"><a href="">Trucks</a></li>
+        <li class="splide__slide"><a href="">Background music</a></li>
+        <li class="splide__slide"><a href="">Children's music</a></li>
+        <li class="splide__slide"><a href="">Action-adventure games</a></li>
+        <li class="splide__slide"><a href="">Cars</a></li>
+        <li class="splide__slide"><a href="">Recently uploaded</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <nav class=" drawer " id="mainDrawer">
+    <ul>
+      <!--HW2: add icons - done!!!-->
+      <li>
+        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" 
+          class="style-scope yt-icon" style="pointer-events: none;">
+          <g class="style-scope yt-icon"><path d="M4,10V21h6V15h4v6h6V10L12,3Z" class="style-scope yt-icon"></path>
+          </g></svg>
+        <a href="">Home</a>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" 
+          class="style-scope yt-icon" style="pointer-events: none;"><g height="24" viewBox="0 0 24 24" width="24" class="style-scope yt-icon"><path d="M17.77 10.32c-.77-.32-1.2-.5-1.2-.5L18 9.06c1.84-.96 2.53-3.23 1.56-5.06s-3.24-2.53-5.07-1.56L6 6.94c-1.29.68-2.07 2.04-2 3.49.07 1.42.93 2.67 2.22 3.25.03.01 1.2.5 1.2.5L6 14.93c-1.83.97-2.53 3.24-1.56 5.07.97 1.83 3.24 2.53 5.07 1.56l8.5-4.5c1.29-.68 2.06-2.04 1.99-3.49-.07-1.42-.94-2.68-2.23-3.25zM10 14.65v-5.3L15 12l-5 2.65z" class="style-scope yt-icon"></path></g></svg>
+        <a href="">Shorts</a>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" 
+            class="style-scope yt-icon" style="pointer-events: none;"><g class="style-scope yt-icon">
+            <path d="M10,18v-6l5,3L10,18z M17,3H7v1h10V3z M20,6H4v1h16V6z M22,9H2v12h20V9z M3,10h18v10H3V10z" 
+            class="style-scope yt-icon"></path></g></svg>
+        <a href="">Subscriptions</a>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" 
+            class="style-scope yt-icon" style="pointer-events: none;"><g class="style-scope yt-icon">
+            <path d="M11,7l6,3.5L11,14V7L11,7z M18,20H4V6H3v15h15V20z M21,18H6V3h15V18z M7,17h13V4H7V17z" 
+            class="style-scope yt-icon"></path></g></svg>
+        <a href="">Library</a>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" 
+            class="style-scope yt-icon" style="pointer-events: none;"><g class="style-scope yt-icon">
+            <path d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M22,12c0,5.51-4.49,10-10,10S2,17.51,2,12h1c0,4.96,4.04,9,9,9 s9-4.04,9-9s-4.04-9-9-9C8.81,3,5.92,4.64,4.28,7.38C4.17,7.56,4.06,7.75,3.97,7.94C3.96,7.96,3.95,7.98,3.94,8H8v1H1.96V3h1v4.74 C3,7.65,3.03,7.57,3.07,7.49C3.18,7.27,3.3,7.07,3.42,6.86C5.22,3.86,8.51,2,12,2C17.51,2,22,6.49,22,12z" class="style-scope yt-icon"></path></g></svg>
+        <a href="">History</a>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="content">
+    <div class="grid-container">
+      <div class="grid-item grid-item-1">
+        <img src="images/187-300x200.jpg" class="img-style" alt="">
+        <h4>Lorem, ipsum dolor.</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, optio.</p>
+      </div>
+      <div class="grid-item grid-item-2">
+        <img src="images/233-300x200.jpg" class="img-style" alt="">
+        <h4>Lorem, ipsum dolor.</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, optio.</p>
+      </div>
+      <div class="grid-item grid-item-3">
+        <img src="images/25-300x200.jpg" class="img-style" alt="">
+        <h4>Lorem, ipsum.</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, optio.</p>
+      </div>
+      <div class="grid-item grid-item-4">
+        <img src="images/265-300x200.jpg" class="img-style" alt="">
+        <h4>Lorem ipsum dolor sit.</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, optio.</p>
+      </div>
+      <div class="grid-item grid-item-5">
+        <img src="images/345-300x200.jpg" class="img-style" alt="">
+        <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, optio.</p>
+      </div>
+      <div class="grid-item grid-item-6">
+        <img src="images/430-300x200.jpg" class="img-style" alt="">
+        <h4>Lorem, ipsum.</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, optio.</p>
+      </div>
+      <div class="grid-item grid-item-7">
+        <img src="images/503-300x200.jpg" class="img-style" alt="">
+        <h4>Lorem ipsum dolor sit.</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, optio.</p>
+      </div>
+      <div class="grid-item grid-item-8">
+        <img src="images/909-300x200.jpg" class="img-style" alt="">
+        <h4>Lorem, ipsum.</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, optio.</p>        
+      </div>
+    </div>
+  </section>
+  
+  <script src="app.js"></script>
 
 </body>
 </html>
