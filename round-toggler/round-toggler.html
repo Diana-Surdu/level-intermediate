@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ROUND TOGGLER</title>
+  <style>
+    button {
+      font-size: 5em;
+      width: 2em;
+      height: 2em;
+      border-radius: 2em;
+      margin: 2em;
+    }
+  </style>
+</head>
+<body>
+
+
+  <button id="toggler" class="btn-toggler">+</button>
+
+  <script>
+    // 1. access the button element ?
+    
+    //method-1
+    let btn = document
+                  .firstElementChild
+                  .lastElementChild
+                  .firstElementChild
+
+                  console.log ("found button", btn)
+
+
+    //HW1: find the button at list 2, 3 method
+
+    //method-2
+    /*let btn = document.getElementById("toggler")
+                console.log('found button', btn)*/
+
+    //method-3
+    /*let btn = document.getElementByTagName("button")
+                console.log('found button', btn)*/
+
+    //method-4
+    /*let btn = document.getElementsByClassName("btn-toggler")
+                console.log('found button', btn)*/
+
+    //method-5
+    /*let btn = document.querySelectorAll("button.btn-toggler")
+              console.log('found button', btn)*/
+
+    // 2. add an event listener
+    btn.addEventListener('click', () => {
+
+          // 3. read the button width, height
+          let cStyle = getComputedStyle(btn)
+          let height = parseInt(cStyle.height) // '160px'
+          height *= 1.5
+          btn.style.height = `${height}px`
+          btn.style.width = `${height}px`
+          //console.log(cStyle.height)
+
+          //HW2: adjust the border-radius
+          btn.style.borderRadius = `${height}px`
+
+          //HW3: first click -> +50%
+              // second click -> +50%
+              // third click -> reset
+    })
+
+    
+
+            
+
+
+
+  </script>
+</body>
+</html>
