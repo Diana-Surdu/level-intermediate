@@ -48,11 +48,12 @@
               console.log('found button', btn)*/
 
     // 2. add an event listener
-    btn.addEventListener('click', () => {
+    /*btn.addEventListener('click', () => {
 
           // 3. read the button width, height
           let cStyle = getComputedStyle(btn)
           let height = parseInt(cStyle.height) // '160px'
+          
           height *= 1.5
           btn.style.height = `${height}px`
           btn.style.width = `${height}px`
@@ -60,11 +61,34 @@
 
           //HW2: adjust the border-radius
           btn.style.borderRadius = `${height}px`
+          
 
           //HW3: first click -> +50%
               // second click -> +50%
               // third click -> reset
-    })
+    })*/
+
+    let cStyle = getComputedStyle(btn)
+    let height = parseInt(cStyle.height) // '160px'
+    
+    btn.addEventListener('click', () => {
+
+      height *= 1.5 
+
+      btn.style.height = `${height}px`
+      btn.style.width = `${height}px`
+     //HW2: adjust the border-radius
+      btn.style.borderRadius = `${height}px`
+      
+
+    //HW3: first click -> +50%
+    // second click -> +50%
+    // third click -> reset
+      if( height > 320 ) {
+        return height = 120
+      }
+  })
+
 
     
 
