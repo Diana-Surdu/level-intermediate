@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Background Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button class="btn">Click Here !!!</button>
+
+    <script>
+         
+        let button = document.body.querySelector('.btn')
+    
+        button.addEventListener('click', () =>{
+ 
+            let background = document.querySelector('body')
+            let setColor = ["yellow", "red", "green", "blue", "black", "orange", "pink"]
+
+            let randomColor = Math.floor(Math.random() * setColor.length)
+
+            background.style.backgroundColor = setColor[randomColor]
+
+            }   
+        )
+
+        
+    </script>
+    
+</body>
+</html>

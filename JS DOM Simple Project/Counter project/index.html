@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button class="increase-btn" onclick="increaseValue()" >+</button>
+    <label><input type="text" value="10"class="input-value"></label>
+    <button onclick="decreaseValue()" class="decrease-btn">-</button>
+
+    <script>
+
+        let defaultValue  = parseInt(document.querySelector('.input-value').value)
+
+        let buttonDecrease = document.body.querySelector('.decrease-btn')
+        let buttonIncrease = document.body.querySelector('.increase-btn')
+        
+        function increaseValue () {   
+            defaultValue += 1 
+            document.body.querySelector('.input-value').value = defaultValue
+            
+        }
+
+        function decreaseValue () {       
+            if ( defaultValue > 0) {
+              defaultValue -= 1
+              document.body.querySelector('.input-value').value = defaultValue
+            }      
+        }
+
+    </script>
+    
+</body>
+</html>
