@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Likes Counter | JSON & amp; STORAGE</title>
+</head>
+<body>
+
+
+    <button id="likeBTN" onclick="like()">Like</button>
+    
+
+    <script>
+
+       let likes = localStorage.getItem("likes")  // = 0 
+       //let btn = document.getElementById("likeBTN")
+           //btn.innerText = `Likes ${likes}`
+
+        function like() {
+            //likes = likes +1 
+            likes++
+            render()
+           
+            //localStorage.setItem("likes", likes)
+
+           if ( likes == null) {
+                localStorage.setItem("likes", "0")
+            } else if ( likes <= 9 ) {
+                localStorage.setItem("likes", likes)
+            } else if ( likes >= 10 && likes <= 20) {
+                localStorage.setItem("likes", "1.5K (1500)")
+            } else {
+                localStorage.setItem("likes", "1.5M (1500000)")
+            }
+
+           
+
+            
+          
+           //console.log(likes)
+           //let btn = document.getElementById("likeBTN")
+           //btn.innerText = `Likes ${likes}`
+
+           // save info in storage
+          
+        }
+
+        function render() {
+            let btn = document.getElementById("likeBTN")
+                btn.innerText = `Likes ${likes}`
+        }
+
+        render()
+
+
+        // HW1:
+        //     if/else
+        //          1...999 - Likes 999
+        //          1000....999000 - Likes 1.5K (1500)
+        //          1000000 ....   - Likes 1.5M (1500000)
+
+
+        // HW2:   if/else
+        //              initial null ? ---> 0
+
+
+        // HW3:  when getting the item -> integer number
+    </script>
+</body>
+</html>
