@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHAT | Local Storage</title>
+</head>
+<body>
+
+    <div id="chat">
+        <ol id="messages-list">
+            <!-- dynamically loaded -->
+        </ol>
+
+        <hr>
+
+        <div id="form">
+            <input type="text" id="message-input">
+            <button id="message-send" onclick="send(); render(messages)">SEND</button>
+        </div>
+    </div>
+
+
+    <script>
+        let messages = JSON.parse( localStorage.getItem('messages') )
+        //const badWord = ["sh!t"]
+
+        ////////////  RENDER FUNCTION  ///////////////
+        const render = (messages) => {
+            let list = document.getElementById('messages-list')
+            list.innerHTML = ``
+            messages.forEach(message => {
+                let li = document.createElement('li')
+
+
+                    //// preprocess render text
+                    ///// String.replace()
+                    message = message.replace(":)", `<img src="icons/smile.png">`)
+                    li.innerHTML = message
+
+                    list.appendChild(li)
+            })
+        }
+
+
+        const send = () => {
+            let input = document.getElementById("message-input")
+            let message = input.value
+            //HW1: validate input -> not empty
+            if  (message.length == 0) {
+               alert("Add a message, please!!!")
+            }
+            
+            //HW1: remove white space ?????
+             //message.trim()
+
+            //HW2: check if badWords are present in text
+            //     for/loop -> badWords -> String.methodxxx? (2-3 methods)
+            //        if included in text
+            //        if a bag word found ---> do not render the message
+            //        instead render -> "[consored]"
+
+            messages.push(message)
+
+                        
+
+            /////////////  store data ///////////
+            localStorage.setItem("messages", JSON.stringify(messages))
+
+            input.value = ""
+        }
+
+        ////////////////////////////
+        render(messages)
+    </script>
+    
+</body>
+</html>
