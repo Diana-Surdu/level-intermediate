@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS | Data Structures | STACK vs QUEUE</title>
+</head>
+<body>
+    
+
+    <!-- 
+
+        STACK vs QUEUE ------ > an ordered! collection of data/actions
+          |        |
+         LIFO     FIFO
+           |          |
+(Last In First Out)   (Fisrt In First Out)
+
+
+
+     -->
+
+
+     <script>
+
+        //       add() -> tail -----> queue (coada) ----> head -> poll()
+        //(last element of array) n ... 3 2 1 0 (first element that has been added in array)
+
+
+      
+        
+        class Element {
+            constructor(value) {
+                this.value = value
+            }
+        }
+        
+        class ArrayQueue {
+            constructor() {
+                this.queue = []
+
+            }
+
+            // add() - insert a specified element into the queue//
+            add (element) {
+                if(element instanceof Element){
+                    this.queue.push(element)  
+                } else {
+                   console.error ('ArrayQueue accepts only Element objects!!!')
+                }
+               
+            }
+
+           //poll() - return and remove the head of the queue
+            poll() {
+                return this.queue.shift()
+            }
+
+             // HW1: implemnt the clear() method -  removes all the elements     
+             clear() {
+                return this.queue = []      
+            }
+
+            // HW2: implement the peek() method for the Queue - peeks at first element
+            peekTailEl() {
+                return this.queue[this.queue.length - 1]
+            }
+
+            peekHeadEl() {
+                return this.queue[0]
+            }
+
+        }
+
+
+        let e1 = new Element('Petru')
+        let e2 = new Element ('Mihai')
+        let e3 = new Element('Victoria')
+        let q = new ArrayQueue ()
+        q.add(e1)
+        q.add(e2)
+        q.add(e3)
+
+
+
+        
+
+
+        //    push() ->  head  -------> stack (stiva , gramada)  ------> tail
+        //    pop()  <-            n ... 3 2 1 0
+        
+        
+        class ArrayStack {
+            constructor() {
+                this.stack = []
+            }
+
+            push(element) {
+               if ( element instanceof Element) {
+                this.stack.unshift(element)
+               } else {
+                console.error('ArrayStack accepts only Element objects!!!')
+               }
+            }
+
+            pop() {
+                return this.stack.shift()
+            }
+
+             // HW1: implemnt the clear() method -  removes all the elements     
+             clear() {
+                return this.stack = []      
+            }
+
+
+            peek() {
+                return this.stack[0]
+            }
+        }
+
+        /*
+        let e1 = new Element('Petru')
+        let e2 = new Element ('Mihai')
+        let e3 = new Element('Victoria')
+        */
+        let s = new ArrayStack ()
+        s.push(e1)
+        s.push(e2)
+        s.push(e3)
+
+        console.log(s)
+
+
+
+
+
+       
+   
+     </script>
+</body>
+</html>
